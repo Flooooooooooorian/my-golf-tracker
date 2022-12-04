@@ -1,10 +1,8 @@
 package com.github.flooooooooooorian.mygolftracker.service;
 
-import com.github.flooooooooooorian.mygolftracker.TrackmanUserRepository;
+import com.github.flooooooooooorian.mygolftracker.repository.TrackmanUserRepository;
 import com.github.flooooooooooorian.mygolftracker.model.TrackmanUser;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserService {

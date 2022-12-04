@@ -1,7 +1,7 @@
 package com.github.flooooooooooorian.mygolftracker.controller;
 
 
-import com.github.flooooooooooorian.mygolftracker.model.Report;
+import com.github.flooooooooooorian.mygolftracker.model.api.trackman.TrackmanReport;
 import com.github.flooooooooooorian.mygolftracker.service.ReportService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,12 +21,12 @@ public class ReportController {
     }
 
     @GetMapping
-    List<Report> getReports() {
+    List<TrackmanReport> getReports() {
         return reportService.findAll();
     }
 
     @GetMapping("/{userId}/{reportId}")
-    Report getReport(@PathVariable String reportId, @PathVariable String userId) {
+    TrackmanReport getReport(@PathVariable String reportId, @PathVariable String userId) {
         return reportService.getReport(userId, reportId);
     }
 }

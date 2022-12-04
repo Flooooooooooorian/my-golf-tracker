@@ -1,4 +1,4 @@
-package com.github.flooooooooooorian.mygolftracker;
+package com.github.flooooooooooorian.mygolftracker.repository;
 
 import com.github.flooooooooooorian.mygolftracker.model.TrackmanUser;
 import org.springframework.data.mongodb.repository.MongoRepository;

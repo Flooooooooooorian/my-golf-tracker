@@ -1,7 +1,7 @@
 package com.github.flooooooooooorian.mygolftracker.service;
 
-import com.github.flooooooooooorian.mygolftracker.TrackmanUserRepository;
-import com.github.flooooooooooorian.mygolftracker.model.Report;
+import com.github.flooooooooooorian.mygolftracker.repository.TrackmanUserRepository;
+import com.github.flooooooooooorian.mygolftracker.model.api.trackman.TrackmanReport;
 import com.github.flooooooooooorian.mygolftracker.model.TrackmanUser;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +18,11 @@ public class ReportService {
         this.trackmanUserRepository = trackmanUserRepository;
     }
 
-    public List<Report> findAll() {
+    public List<TrackmanReport> findAll() {
         return null;
     }
 
-    public Report getReport(String userId, String reportId) {
+    public TrackmanReport getReport(String userId, String reportId) {
         TrackmanUser trackmanUser = trackmanUserRepository.findById(userId).orElseThrow();
         return trackmanApiService.getReport(trackmanUser.cookie(), reportId);
     }
